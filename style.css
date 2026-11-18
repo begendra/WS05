@@ -1,0 +1,254 @@
+body {
+    background-color: lavenderblush;
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    padding: 20px;
+}
+
+h1 {
+    color: #588a87;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    color: #eea955;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Navigation style for Semantic Header */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #588a87;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #588a87;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #588a87;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #466e6b;
+}
+
+/* Workshop 4: Task 2 - Grid Layout CSS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Workshop 4: Task 3 - Flexbox Layout CSS */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+/* Workshop 4: Task 4 - Media Queries CSS */
+.responsive-box {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: lightcoral;
+  }
+}
+
+@media (min-width: 601px) {
+  .responsive-box {
+    background-color: lightseagreen;
+  }
+}
+
+.transition-button {
+    background-color: lightblue;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transition-button:hover {
+    background-color: lightcoral;
+}
+
+.animation-box {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    position: relative;
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100px;
+    }
+}
+
+.pseudo-list li:nth-child(odd) {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+.pseudo-list li:nth-child(even) {
+    background-color: white;
+    padding: 5px;
+}
+
+.filter-image {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.filter-image:hover {
+    filter: grayscale(0%);
+}
+
+.quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+    color: #444;
+}
+
+.quote::before {
+    content: '“';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    color: darkblue;
+}
+
+/* =========================================
+   Workshop 5: Responsive Design CSS
+   ========================================= */
+
+/* Task 1: Responsive Layout */
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+    }
+}
+
+/* Task 2: Responsive Image */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Task 3: Media Queries */
+.media-query-box {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .media-query-box {
+        background-color: lightcoral;
+    }
+}
+
+@media (min-width: 601px) {
+    .media-query-box {
+        background-color: lightblue;
+    }
+}
+
+/* Task 4: Responsive Navigation Bar */
+.responsive-nav .nav-list {
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    .responsive-nav .nav-list {
+        display: none;
+    }
+
+    .responsive-nav .menu-toggle {
+        display: block;
+    }
+}
